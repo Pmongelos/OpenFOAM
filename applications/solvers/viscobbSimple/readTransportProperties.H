@@ -23,9 +23,6 @@
     dimensionedScalar A3(transportProperties.lookup("A3"));
     dimensionedScalar mu(transportProperties.lookup("mu"));
 
-    // Rayleigh number [s⁴/(m⁴·K)] instead of // Thermal expansion coefficient [1/K]
-    dimensionedScalar Ra(transportProperties.lookup("Ra"));
-
     // Thermal diffusivity coefficient [m²/s]
     dimensionedScalar DT(transportProperties.lookup("DT"));
 //################ End #############################
