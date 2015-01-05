@@ -3,7 +3,7 @@
     tmp<fvVectorMatrix> UEqn
     (
       - fvm::laplacian(NUEff, U)
-      - (fvc::grad(U) & fvc::grad(NUEff))
+      - (twoSymm(fvc::grad(U)) & fvc::grad(NUEff))
 /*
         fvm::div(phi, U)
       + turbulence->divDevReff(U)
