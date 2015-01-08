@@ -3,7 +3,7 @@
     tmp<fvVectorMatrix> UEqn
     (
       - fvm::laplacian(NUEff, U)
-      - fvc::div(NUEff*dev(T(fvc::grad(U))))
+      - fvc::div(NUEff*dev(fvc::grad(U)().T()))
 /*
       - fvm::laplacian(NUEff, U)
       - (fvc::grad(U) & fvc::grad(NUEff))
