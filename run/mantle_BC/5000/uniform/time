@@ -9,49 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      p_rgh;
+    class       dictionary;
+    location    "5000/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -2 0 0 0 0];
+value           5000;
 
-internalField   uniform 0;
+name            "5000";
 
-boundaryField
-{
-    top
-    {
-/*
-	type		fixedValue;
-	value		uniform 0;
-*/
-        type            fixedFluxPressure;
-        rho             rhok;
-        value           uniform 0;
-    }
+index           5000;
 
-    bottom
-    {
-        type            fixedFluxPressure;
-        rho             rhok;
-        value           uniform 0;
-    }
+deltaT          1;
 
-    left_cyc
-    {
-        type		cyclic;
-    }
+deltaT0         1;
 
-    right_cyc
-    {
-        type		cyclic;
-    }
-
-    frontAndBack
-    {
-        type            empty;
-    }
-}
 
 // ************************************************************************* //
