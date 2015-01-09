@@ -28,7 +28,7 @@ boundaryField
     bottom
     {
         type            fixedValue;
-        value           uniform 43.8;//36.5;
+        value           uniform 36.5;//43.8;
     }
     left_cyc
     {
