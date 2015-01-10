@@ -8,17 +8,17 @@
     (
         fvm::div(phi, T)
       - fvm::laplacian(DT, T)//change alphaEff for DT
-     ==
+/*     ==
         fvOptions(T)
-    );
+*/    );
 
     TEqn.relax();
 
-    fvOptions.constrain(TEqn);
+//    fvOptions.constrain(TEqn);
 
     TEqn.solve();
 
-    fvOptions.correct(T);
+//    fvOptions.correct(T);
 
 //Add for kinematic viscosity coefficient calculation #############
 
