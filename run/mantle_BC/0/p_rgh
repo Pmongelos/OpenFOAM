@@ -22,11 +22,12 @@ boundaryField
 {
     top
     {
-
+	type		zeroGradient;
+/*
         type            fixedFluxPressure;
         rho             rhok;
         value           uniform 0;
-    }
+*/    }
 
     bottom
     {
