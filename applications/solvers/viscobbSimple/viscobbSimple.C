@@ -48,7 +48,7 @@ Description
 #include "fvCFD.H"
 //#include "singlePhaseTransportModel.H"
 //#include "RASModel.H"
-//#include "fvIOoptionList.H"
+#include "fvIOoptionList.H"
 #include "simpleControl.H"
 #include "fixedFluxPressureFvPatchScalarField.H"
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     #include "createMesh.H"
     #include "readGravitationalAcceleration.H"
     #include "createFields.H"
-//    #include "createFvOptions.H"
+    #include "createFvOptions.H"
     #include "initContinuityErrs.H"
 
     simpleControl simple(mesh);
