@@ -79,6 +79,9 @@ int main(int argc, char *argv[])
             #include "UEqn.H"
             #include "TEqn.H"
             #include "pEqn.H"
+//Add for kinematic viscosity coefficient calculation #############
+
+    NUEff = A1*atan(A3*(T - TRef - b)) + A2;
         }
 
 //        turbulence->correct(); ################## Deleted

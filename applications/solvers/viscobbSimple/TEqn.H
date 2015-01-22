@@ -20,9 +20,5 @@
 
 //    fvOptions.correct(T);
 
-//Add for kinematic viscosity coefficient calculation #############
-
-    NUEff = A1*atan(A3*(T - TRef - b)) + A2;
-
     rhok = 1.0 - beta*(T - TRef);
 }
