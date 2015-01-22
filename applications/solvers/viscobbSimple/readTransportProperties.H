@@ -17,10 +17,10 @@
     // Reference Kinematic viscosity coefficient [m²/s]
     dimensionedScalar nu0(transportProperties.lookup("nu0"));
 
+    // Rayleigh Number
+    dimensionedScalar Ra(transportProperties.lookup("Ra"));
+
     // Kinematic viscosity Law coefficients
-    dimensionedScalar a(transportProperties.lookup("a"));
-    dimensionedScalar b(transportProperties.lookup("b"));
-    dimensionedScalar A3(transportProperties.lookup("A3"));
     dimensionedScalar mu(transportProperties.lookup("mu"));
 
     // Thermal diffusivity coefficient [m²/s]

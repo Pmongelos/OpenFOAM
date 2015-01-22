@@ -22,7 +22,7 @@
 
 //Add for kinematic viscosity coefficient calculation #############
 
-    NUEff = A1*atan(A3*(T - TRef - b)) + A2;
+    NUEff = nu0*exp(-gamma*(T-TRef));
 
     rhok = 1.0 - beta*(T - TRef);
 }

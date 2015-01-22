@@ -54,10 +54,8 @@
 */
 
 //#################### Add ########################
-    dimensionedScalar beta(nu0*DT/(9.81*mu)); //Beta calculation
-    dimensionedScalar large("large",dimensionSet(0,0,0,1,0,0,0), 2500);
-    dimensionedScalar A1( nu0*(1-a)/(atan(-A3*b)-atan(A3*(large-b))) ); //Viscosity law
-    dimensionedScalar A2( nu0 - A1*atan(-A3*b) ); //Viscosity law
+    dimensionedScalar beta(nu0*DT*Ra/9.81); //Beta calculation
+    dimensionedScalar gamma(mu*Ra); //Viscosity law
 
     volScalarField NUEff
     (
@@ -69,7 +67,7 @@
             IOobject::NO_READ,
             IOobject::AUTO_WRITE
         ),
-	A1*atan(A3*(T - TRef- b)) + A2
+	nu0*exp(-gamma*(T-TRef))
     );
 
 //#################### End ########################
